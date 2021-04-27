@@ -219,7 +219,6 @@
       
         <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>上一篇学习笔记介绍了一些基本的矩阵操作知识，本篇文章针对部分矩阵操作内容做了一些补充。</p>
 <a id="more"></a>
-
 <h3 id="一、特殊的变量"><a href="#一、特殊的变量" class="headerlink" title="一、特殊的变量"></a>一、特殊的变量</h3><p>1、ans</p>
 <p>2、复数表示字符：i j</p>
 <p>3、无穷大：Inf</p>
@@ -228,17 +227,11 @@
 <p>6、π：pi</p>
 <h3 id="二、矩阵的使用补充"><a href="#二、矩阵的使用补充" class="headerlink" title="二、矩阵的使用补充"></a>二、矩阵的使用补充</h3><p>例：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">A =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span>     <span class="number">4</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">4</span>     <span class="number">6</span>     <span class="number">8</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">6</span>     <span class="number">9</span>    <span class="number">12</span></span><br><span class="line">     <span class="number">4</span>     <span class="number">8</span>    <span class="number">12</span>    <span class="number">16</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A(<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">8</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A([<span class="number">1</span> <span class="number">3</span> <span class="number">5</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span>     <span class="number">2</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A([<span class="number">1</span> <span class="number">3</span>;<span class="number">1</span> <span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span></span><br><span class="line"> 注：这里是第一个和第三个元素的值组成了一行；第二行由于和第一行相同，因此组成了一个<span class="number">2</span>*<span class="number">2</span>的矩阵。</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A(<span class="number">3</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">6</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A([<span class="number">1</span> <span class="number">3</span>], [<span class="number">1</span> <span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">9</span></span><br><span class="line">注：在这里两个([<span class="number">1</span> <span class="number">3</span>],[<span class="number">1</span> <span class="number">3</span>])分别代表的是row和column,此时代表的数值是A(<span class="number">1</span>, <span class="number">1</span>)、A(<span class="number">1</span>, <span class="number">3</span>)、A(<span class="number">3</span>, <span class="number">1</span>)、A(<span class="number">3</span>, <span class="number">3</span>)位置的数值。</span><br></pre></td></tr></table></figure>
-
 <h3 id="三、常见的特殊矩阵"><a href="#三、常见的特殊矩阵" class="headerlink" title="三、常见的特殊矩阵"></a>三、常见的特殊矩阵</h3><p>1、linspace (x1, x2, N) :产生x1,x2之间的N点行矢量，其中x1、x2、N分别为起始值、中止值、元素个数。若缺省N，默认点数为100。</p>
 <p>2、eye (n) :返回n*n的单位矩阵。</p>
 <p>3、zeros (n1, n2) :生成大小为n1*n2的全零矩阵。</p>
@@ -505,6 +498,8 @@
 
 
 
+
+  
 
   
 
