@@ -128,7 +128,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-about">
@@ -155,6 +155,82 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhangliyuan-tech.github.io/2021/05/04/Tensorflow%E6%90%AD%E5%BB%BA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%88CNN%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="张力元">
+      <meta itemprop="description" content="在谁都不了解谁的人群里，在这样一个人人目视前方、也只知道目视前方的世界里，要这样向前飞驰。————《南方高速》">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张力元的个人站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/04/Tensorflow%E6%90%AD%E5%BB%BA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%88CNN%EF%BC%89/" class="post-title-link" itemprop="url">Tensorflow搭建卷积神经网络</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-04 10:42:58 / 修改时间：21:00:28" itemprop="dateCreated datePublished" datetime="2021-05-04T10:42:58+08:00">2021-05-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tensorflow%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">Tensorflow搭建神经网络</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>作为深度学习代表算法之一，卷积神经网络（Convolutional Neural Networks, CNN）是一类包含卷积计算而且具有深度结构的前馈神经网络。</p>
+<p>理解卷积神经网络，就要理解什么是卷积和神经网络。对于神经网络的概念，在前述的文章中已经详细的介绍过，在这里不再做具体的介绍；而对于卷积这个概念，没有接触过一些信号处理类的专业书籍可能不是特别了解，在这里做一些简单的介绍。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/04/Tensorflow%E6%90%AD%E5%BB%BA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%88CNN%EF%BC%89/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -190,7 +266,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-04 10:37:55" itemprop="dateModified" datetime="2021-05-04T10:37:55+08:00">2021-05-04</time>
+                <time title="修改时间：2021-05-04 20:59:09" itemprop="dateModified" datetime="2021-05-04T20:59:09+08:00">2021-05-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,7 +289,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>在<a href="https://zhangliyuan-tech.github.io/2021/04/19/Tensorflow%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%AF%87/">上一篇博文</a>中，我们已经介绍了基本的神经网络的组成结构和搭建方法。在本博文中我们将会在上篇博文基础之上展示一些进阶内容。本博文主要涉及以下内容：Tensorboard可视化、分类学习任务、过拟合问题的产生以及解决方法。</p>
+          <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>在<a href="https://zhangliyuan-tech.github.io/2021/04/19/Tensorflow%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%AF%87/">Tensorflow搭建神经网络基础篇</a>中，我们已经介绍了基本的神经网络的组成结构和搭建方法。在本博文中我们将会在上篇博文基础之上展示一些进阶内容。本博文主要涉及以下内容：Tensorboard可视化、分类学习任务、过拟合问题的产生以及解决方法。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/27/Tensorflow%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%BF%9B%E9%98%B6%E7%AF%87/#more" rel="contents">
@@ -773,7 +849,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
